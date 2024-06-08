@@ -1,6 +1,0 @@
-Manifest-Version: 1.0
-Build-Jdk-Spec: 17
-Implementation-Title: edu-track-api-for-mobile-impl
-Implementation-Version: 0.1.0
-Created-By: Maven Integration for Eclipse
-
