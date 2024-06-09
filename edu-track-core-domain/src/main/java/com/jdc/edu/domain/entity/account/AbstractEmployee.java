@@ -11,7 +11,7 @@ import lombok.EqualsAndHashCode;
 @MappedSuperclass
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class AbstractEmployee extends AbstractLoginUser{
+public class AbstractEmployee extends AbstractLoginUser {
 
 	@Embedded
 	private EmployeeInfo employeeInfo;

@@ -12,11 +12,14 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Index;
 import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @Entity
+@Table(indexes = { @Index(name = "account_username_idx", columnList = "username", unique = true ) })
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class Account extends AbstractEntity{
@@ -25,7 +28,7 @@ public class Account extends AbstractEntity{
 	@GeneratedValue(strategy = GenerationType.UUID)
 	private UUID id;
 	
-	@Column(nullable = false, unique = true)
+	@Column(name = "username", nullable = false)
 	private String username;
 	@Column(nullable = false)
 	private String password;
