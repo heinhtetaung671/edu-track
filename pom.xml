@@ -89,6 +89,13 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<release>21</release>
+					<annotationProcessorPaths>
+						<path>
+							<groupId>org.hibernate</groupId>
+							<artifactId>hibernate-jpamodelgen</artifactId>
+							<version>5.5.9.Final</version>
+						</path>
+					</annotationProcessorPaths>
 				</configuration>
 			</plugin>
 		</plugins>
