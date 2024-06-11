@@ -2,7 +2,7 @@ package com.jdc.edu.domain.entity.account;
 
 import java.util.List;
 
-import com.jdc.edu.domain.entity.course.StudentCourse;
+import com.jdc.edu.domain.entity.enrollment.Enrollment;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -16,6 +16,6 @@ import lombok.EqualsAndHashCode;
 public class Student extends AbstractLoginUser{
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "student")
-	private List<StudentCourse> studentCourses;
+	private List<Enrollment> enrollments;
 	
 }

@@ -9,6 +9,7 @@ import org.hibernate.annotations.ColumnDefault;
 
 import com.jdc.edu.domain.constant.CourseDeliveryMethod;
 import com.jdc.edu.domain.entity.AbstractEntity;
+import com.jdc.edu.domain.entity.enrollment.Enrollment;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -47,6 +48,6 @@ public class Course extends AbstractEntity{
 	private CourseAdditionalInfo courseAdditionalInfo;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "course")
-	private List<StudentCourse> studentCourses;
+	private List<Enrollment> enrollments;
 	
 }

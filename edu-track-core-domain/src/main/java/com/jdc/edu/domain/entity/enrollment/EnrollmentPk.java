@@ -1,4 +1,4 @@
-package com.jdc.edu.domain.entity.course;
+package com.jdc.edu.domain.entity.enrollment;
 
 import java.io.Serializable;
 import java.util.UUID;
@@ -9,7 +9,7 @@ import lombok.Data;
 
 @Data
 @Embeddable
-public class StudentCoursePk implements Serializable{
+public class EnrollmentPk implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
