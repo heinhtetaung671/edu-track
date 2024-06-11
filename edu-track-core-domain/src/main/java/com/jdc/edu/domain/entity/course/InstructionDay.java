@@ -7,6 +7,7 @@ import lombok.EqualsAndHashCode;
 
 import java.time.DayOfWeek;
 import java.time.LocalTime;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -28,4 +29,7 @@ public class InstructionDay extends AbstractEntity {
     @Column(name = "endTime", nullable = false)
     private LocalTime endTime;
 
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "instructionDay")
+    private List<TimeTableInstructionDay> timeTableInstructionDays;
+    
 }

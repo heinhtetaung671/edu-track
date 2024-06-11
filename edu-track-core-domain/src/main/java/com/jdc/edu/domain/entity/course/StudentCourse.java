@@ -1,8 +1,11 @@
 package com.jdc.edu.domain.entity.course;
 
+import java.time.LocalDate;
+
 import com.jdc.edu.domain.entity.AbstractEntity;
 import com.jdc.edu.domain.entity.account.Student;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
@@ -25,5 +28,8 @@ public class StudentCourse extends AbstractEntity{
 	@MapsId(value = "courseId")
 	@ManyToOne(optional = false)
 	private Course course;
+	
+	@Column(nullable = false)
+	private LocalDate enrolledAt;
 	
 }

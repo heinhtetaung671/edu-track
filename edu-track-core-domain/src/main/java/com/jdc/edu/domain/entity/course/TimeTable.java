@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(indexes = { @Index(name = "course_timetable_format_name_unique_idx", columnList = "name", unique = true)})
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class TimeTable extends AbstractEntity {
@@ -18,7 +17,7 @@ public class TimeTable extends AbstractEntity {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Column(name = "name", nullable = false)
+    @Column(name = "name", nullable = false, unique = true)
     private String name;
 
     private String remark;

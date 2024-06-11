@@ -1,10 +1,10 @@
 package com.jdc.edu.domain.entity.course;
 
-import jakarta.persistence.Embeddable;
-import lombok.Data;
-
 import java.io.Serializable;
 import java.util.UUID;
+
+import jakarta.persistence.Embeddable;
+import lombok.Data;
 
 @Embeddable
 @Data

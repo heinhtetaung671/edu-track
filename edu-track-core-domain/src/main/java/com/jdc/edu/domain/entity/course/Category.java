@@ -11,14 +11,11 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Index;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @Entity
-@Table(indexes = { @Index(name = "category_name_idx", columnList = "name", unique = true) })
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class Category extends AbstractEntity{
@@ -27,7 +24,7 @@ public class Category extends AbstractEntity{
 	@GeneratedValue(strategy = GenerationType.UUID)
 	private UUID id;
 	
-	@Column(name = "name", nullable = false)
+	@Column(name = "name", nullable = false, unique = true)
 	private String name;
 	
 	private String description;
