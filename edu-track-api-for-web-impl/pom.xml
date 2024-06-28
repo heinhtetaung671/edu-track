@@ -14,10 +14,21 @@
 			<groupId>com.jdc.edu</groupId>
 			<artifactId>edu-track-api-for-web</artifactId>
 		</dependency>
-
+		
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
 		<dependency>
 			<groupId>com.jdc.edu</groupId>
-			<artifactId>edu-track-core-domain</artifactId>
+			<artifactId>edu-track-core-service</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.jdc.edu</groupId>
+			<artifactId>edu-track-core-service-impl</artifactId>
 		</dependency>
 	</dependencies>
 </project>
